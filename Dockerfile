@@ -2,7 +2,9 @@ FROM alpine:edge
 MAINTAINER silverbolt28
 
 # Install packages
-RUN apk add --no-cache shadow curl ffmpeg mediainfo
+RUN \
+ apk upgrade --no-cache --available && \
+ apk add --no-cache tzdata shadow curl ffmpeg mediainfo
 
 # Change nobody's uid, gid, and shell
 RUN usermod -u 99 nobody
