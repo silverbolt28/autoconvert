@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.10
 MAINTAINER silverbolt28
 
 # Install packages
