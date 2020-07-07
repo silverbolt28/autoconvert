@@ -1,5 +1,4 @@
 FROM alpine:3.12
-MAINTAINER silverbolt28
 
 # Install packages
 RUN \
