@@ -13,11 +13,11 @@ RUN \
 
 # Add scripts to /bin
 COPY convert.sh /bin/convert.sh
-COPY pushbullet.sh /bin/pushbullet.sh
+COPY notify.sh /bin/notify.sh
 COPY watchfolder.sh /bin/watchfolder.sh
 RUN \
  chmod +x /bin/convert.sh && \
- chmod +x /bin/pushbullet.sh && \
+ chmod +x /bin/notify.sh && \
  chmod +x /bin/watchfolder.sh
 
 VOLUME ["/config", "/data"]

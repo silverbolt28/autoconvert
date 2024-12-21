@@ -16,7 +16,7 @@ while true ; do
     nice -n 19 /config/convert.sh "$f"
     mv "$f" /data/completed/
     filename=$(basename "$f")
-    /bin/pushbullet.sh "AutoConvert" "Finished converting $filename"
+    /bin/notify.sh "AutoConvert" "Finished converting $filename"
   done
   sleep 60
 done
