@@ -12,5 +12,5 @@ fi
 if [ -z "$DISCORDWEBHOOK" ] ; then
   echo "DISCORDWEBHOOK variable not set, skipping Discord" 1>&2
 else
-  curl -H "Content-Type: application/json" -d '{"username": '\"$1\"', "content": '\"$2\"'}' "$DISCORDWEBHOOK"
+  curl -H "Content-Type: application/json" -d "{\"username\": \"$TITLE\", \"content\": \"$MSG\"}" "$DISCORDWEBHOOK"
 fi
